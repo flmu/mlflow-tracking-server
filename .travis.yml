@@ -1,3 +1,10 @@
+sudo: required
+
+language: ruby
+
+services:
+  - docker
+
 deploy:
   provider: script
   script: bash .travis/docker_push.sh
