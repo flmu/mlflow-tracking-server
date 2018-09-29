@@ -1,0 +1,5 @@
+deploy:
+  provider: script
+  script: bash .travis/docker_push.sh
+  on:
+    branch: master
