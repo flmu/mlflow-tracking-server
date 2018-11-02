@@ -7,7 +7,7 @@ if [ -z $FILE_DIR ]; then
   exit 1
 fi
 
-mkdir $FILE_DIR && mlflow server \
+mkdir -p $FILE_DIR && mlflow server \
     --file-store $FILE_DIR \
     --host 0.0.0.0 \
     --port $PORT

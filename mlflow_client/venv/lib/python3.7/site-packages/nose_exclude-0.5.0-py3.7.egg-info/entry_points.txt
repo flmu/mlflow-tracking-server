@@ -1,0 +1,3 @@
+[nose.plugins]
+nose_exclude = nose_exclude:NoseExclude
+

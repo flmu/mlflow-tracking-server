@@ -1,3 +1,7 @@
+# TODO
+- Change storage model for the MLFlow Tracking Server from local file storage to S3
+- Second docker image that will serve as a mlflow client (incl. minio for AWS S3 storage)
+
 # Docker image of MLFLow Tracking Server
 
 [![Build Status](https://travis-ci.org/flmu/mlflow-tracking-server.svg?branch=master)](https://travis-ci.org/flmu/mlflow-tracking-server)
@@ -13,7 +17,7 @@ $ docker run \
     -p 5000:5000 \
     -e PORT=5000 \
     -e FILE_DIR=/mlflow \
-    foxrider/mlflow-tracking-server:0.1.0
+    foxrider/mlflow-tracking-server:0.1.1
 ```
 
 Access to http://127.0.0.1:5000
