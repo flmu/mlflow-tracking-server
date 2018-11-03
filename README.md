@@ -8,11 +8,11 @@
 
 [![Build Status](https://travis-ci.org/flmu/mlflow-tracking-server.svg?branch=master)](https://travis-ci.org/flmu/mlflow-tracking-server)
 
-This repo provides a docker image of [MLFLow Tracking Server](https://www.mlflow.org/docs/latest/tracking.html) based on an internal file system for metadata (e.g. parameters, metrics) and an [AWS S3 bucket](https://aws.amazon.com/s3/) for [files and artifacts](https://www.mlflow.org/docs/latest/tracking.html#storage).
+This repo provides a docker image of [MLFLow Tracking Server](https://www.mlflow.org/docs/latest/tracking.html) based on an internal file system for metadata (e.g. parameters, metrics) and an [AWS S3 Bucket](https://aws.amazon.com/s3/) for [files and artifacts](https://www.mlflow.org/docs/latest/tracking.html#storage).
 
 ## Prerequisite
-Before you start the MLFlow Tracking Server, you must create an AWS Bucket and the corresponding credentials.
-1. AWS Bucket: TODO
+Before you start the MLFlow Tracking Server, you must create an AWS S3 Bucket and the corresponding credentials.
+1. AWS S3 Bucket: TODO
 2. AWS Credentials for your bucket: TODO
 
 ## Run the MLFlow Tracking Server
@@ -39,7 +39,7 @@ Access to http://127.0.0.1:5000
 |Key|Description|
 |---|---|
 |`FILE_DIR`|Directory for artifacts and metadata (e.g. parameters, metrics)|
-|`AWS_BUCKET`|Name of AWS Bucket that will contain the artifacts|
+|`AWS_BUCKET`|Name of AWS S3 Bucket that will contain the artifacts|
 |`AWS_ACCESS_KEY_ID`|AWS-Access-Key that you have created in the `Prerequisite` section|
 |`AWS_SECRET_ACCESS_KEY`|AWS-Secret-Access-Key that you have created in the `Prerequisite` section|
 
@@ -53,7 +53,7 @@ Access to http://127.0.0.1:5000
 TODO
 - AWS_SECRET_ACCESS_KEY + AWS_ACCESS_KEY_ID on client side or ~/.aws/credentials
 - Client Example: my example + mlflow example (mlflow experiments create hello_world_experiment + MLFLOW_EXPERIMENT_ID=<Number> python examples/train.py)
-- AWS Bucket Subfolder
+- AWS S3 Bucket Subfolder
 
 ## Author
 
