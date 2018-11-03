@@ -1,6 +1,12 @@
 # TODO
-- Change storage model for the MLFlow Tracking Server from local file storage to S3
-- Second docker image that will serve as a mlflow client (incl. minio for AWS S3 storage)
+- README Client + Server + (AWS: create bucket + policy)
+- AWS_SECRET_ACCESS_KEY + AWS_ACCESS_KEY_ID on server side
+- AWS_SECRET_ACCESS_KEY + AWS_ACCESS_KEY_ID on client side or ~/.aws/credentials
+- New Docker Image
+- adjust travis
+- Client Example: my example + mlflow example (mlflow experiments create hello_world_experiment + MLFLOW_EXPERIMENT_ID=<Number> python examples/train.py)
+- docker run --rm -p 5000:5000 -e PORT=5000 -e FILE_DIR=/mlflow -e AWS_BUCKET=mlflow-artifacts-flmu -e AWS_ACCESS_KEY_ID=<TODO> -e AWS_SECRET_ACCESS_KEY=<TODO> foxrider/mlflow-tracking-server:0.2.0
+- https://github.com/apex/gh-polls ?
 
 # Docker image of MLFLow Tracking Server
 
