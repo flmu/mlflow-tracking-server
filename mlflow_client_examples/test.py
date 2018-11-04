@@ -1,16 +1,14 @@
 import os
 from random import random, randint
 import mlflow
-from mlflow.utils.file_utils import (build_path)
 
 if __name__ == "__main__":
-    print("Running mlflow_tracking.py")
+    print("Running the test script ...")
 
     mlflow.set_tracking_uri("http://127.0.0.1:5000")
 
-
-    if not os.path.exists("/Users/Florian/Desktop/mlflow"):
-        os.makedirs("/Users/Florian/Desktop/mlflow")
+    if not os.path.exists("artifact_folder"):
+        os.makedirs("artifact_folder")
 
     mlflow.log_param("param1", randint(0, 100))
 
@@ -18,8 +16,7 @@ if __name__ == "__main__":
     mlflow.log_metric("foo", random() + 1)
     mlflow.log_metric("foo", random() + 2)
 
-
-    with open("/Users/Florian/Desktop/mlflow/test.txt", "w") as f:
+    with open("artifact_folder/test.txt", "w") as f:
         f.write("hello world!")
 
-    mlflow.log_artifacts("mlflow")
+    mlflow.log_artifacts("artifact_folder")

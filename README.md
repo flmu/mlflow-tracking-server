@@ -1,9 +1,3 @@
-# TODO
-- Section: Prerequisite
-- Section: Test the MLFlow Tracking Server
-- Share the results in the corresponding threads
-
-
 # Docker image of MLFLow Tracking Server
 
 [![Build Status](https://travis-ci.org/flmu/mlflow-tracking-server.svg?branch=master)](https://travis-ci.org/flmu/mlflow-tracking-server)
@@ -12,8 +6,35 @@ This repo provides a docker image of [MLFLow Tracking Server](https://www.mlflow
 
 ## Prerequisite
 Before you start the MLFlow Tracking Server, you must create an AWS S3 Bucket and the corresponding credentials.
-1. AWS S3 Bucket: TODO
-2. AWS Credentials for your bucket: TODO
+1. [AWS Account](https://aws.amazon.com/?nc2=h_lg)
+2. Create a new AWS [S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
+3. Add a new [AWS User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console) to to the system
+4. Assign the following policy to the user:
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListAllMyBuckets",
+                "s3:HeadBucket"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::<_AWS_BUCKET_NAME_>",
+                "arn:aws:s3:::<_AWS_BUCKET_NAME_>/*"
+            ]
+        }
+    ]
+}
+```
 
 ## Run the MLFlow Tracking Server
 
@@ -50,10 +71,14 @@ Access to http://127.0.0.1:5000
 |`PORT`|Value for `listen` directive|`5000`|
 
 ## Test the MLFlow Tracking Server
-TODO
-- AWS_SECRET_ACCESS_KEY + AWS_ACCESS_KEY_ID on client side or ~/.aws/credentials
-- Client Example: my example + mlflow example (mlflow experiments create hello_world_experiment + MLFLOW_EXPERIMENT_ID=<Number> python examples/train.py)
-- AWS S3 Bucket Subfolder
+### Prerequisite
+
+1. Install the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/installing.html)
+2. Add the AWS credentials to the client. You can either [set the environment variables](https://www.schrodinger.com/kb/1842) `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` on your client or use the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) command `aws configure`.
+
+### Simple Python Script
+
+See this [link](mlflow_client_examples/test.py)
 
 ## Author
 
