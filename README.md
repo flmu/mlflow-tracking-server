@@ -4,7 +4,7 @@
 
 This repo provides a docker image of [MLFLow Tracking Server](https://www.mlflow.org/docs/latest/tracking.html) based on an internal file system for metadata (e.g. parameters, metrics) and an [AWS S3 Bucket](https://aws.amazon.com/s3/) for [files and artifacts](https://www.mlflow.org/docs/latest/tracking.html#storage).
 
-[!Architecture](docs/mlflow_tracking_server_architecture.jpg)
+![Architecture](docs/mlflow_tracking_server_architecture.jpg)
 
 ## Prerequisite
 Before you start the MLFlow Tracking Server, you must create an AWS S3 Bucket and the corresponding credentials.
