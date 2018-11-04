@@ -12,4 +12,4 @@ deploy:
   provider: script
   script: bash .travis/docker_push.sh
   on:
-    all_branches: true
+    branch: master
