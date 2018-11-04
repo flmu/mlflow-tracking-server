@@ -1,3 +1,5 @@
+**Note:** Currently, the artifact feature can not be used (see issue: [#4](https://github.com/flmu/mlflow-tracking-server/issues/4))
+
 # Docker image of MLFLow Tracking Server
 
 [![Build Status](https://travis-ci.org/flmu/mlflow-tracking-server.svg?branch=master)](https://travis-ci.org/flmu/mlflow-tracking-server)
