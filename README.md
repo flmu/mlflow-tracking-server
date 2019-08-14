@@ -6,12 +6,13 @@ This repo provides a docker image of [MLFLow Tracking Server](https://www.mlflow
 
 ![Architecture](docs/mlflow_tracking_server_architecture.jpg)
 
-## Prerequisite
+## Prerequisites
 Before you start the MLFlow Tracking Server, you must create an AWS S3 Bucket and the corresponding credentials.
 1. [AWS Account](https://aws.amazon.com/?nc2=h_lg)
-2. Create a new AWS [S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
-3. Add a new [AWS User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console) to to the system
-4. Assign the following policy to the user:
+2. [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
+3. Create a new AWS [S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
+4. Add a new [AWS User](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console) to to the system
+5. Assign the following policy to the user:
 ```json
 {
     "Version": "2012-10-17",
