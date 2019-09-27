@@ -23,7 +23,7 @@ if [ -z $AWS_SECRET_ACCESS_KEY ]; then
 fi
 
 mkdir -p $FILE_DIR && mlflow server \
-    --file-store $FILE_DIR \
+    --backend-store-uri file://${FILE_DIR} \
     --default-artifact-root s3://${AWS_BUCKET}/artifacts \
     --host 0.0.0.0 \
     --port $PORT
