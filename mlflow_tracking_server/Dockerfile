@@ -1,9 +1,10 @@
-FROM python:3.7.0
+FROM python:3.7
 
 LABEL maintainer "Florian Muchow <flmuchow@gmail.com>"
 
-RUN pip install mlflow
-RUN pip install awscli --upgrade --user
+RUN pip install mlflow && \
+    pip install awscli --upgrade --user && \
+    pip install boto3
 
 ENV PORT 5000
 ENV AWS_BUCKET bucket
