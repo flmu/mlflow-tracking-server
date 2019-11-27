@@ -83,6 +83,14 @@ Access to http://127.0.0.1:5000
 
 See this [link](mlflow_client_examples/test.py)
 
-## Author
+## Contribution
 
-Florian Muchow ([@flmu](https://github.com/flmu))
+Pull requests are welcome :)
+
+## Project Initiator
+
+[Florian Muchow](https://www.linkedin.com/in/florian-muchow/)
+
+## Contributors
+
+[Thanks to all the contributors](https://github.com/flmu/mlflow-tracking-server/graphs/contributors)
