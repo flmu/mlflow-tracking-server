@@ -91,6 +91,8 @@ Pull requests are welcome :)
 
 [Florian Muchow](https://www.linkedin.com/in/florian-muchow/)
 
+<a href="https://www.buymeacoffee.com/foxrider" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important; width: auto !important;"></a>
+
 ### Contributors
 
 [Thanks to all the contributors](https://github.com/flmu/mlflow-tracking-server/graphs/contributors)
