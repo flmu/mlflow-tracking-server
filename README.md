@@ -1,6 +1,6 @@
 # MLFLow Tracking Server Based on Docker and AWS S3
 
-[![Build Status](https://travis-ci.org/flmu/mlflow-tracking-server.svg?branch=master)](https://travis-ci.org/flmu/mlflow-tracking-server)
+[![Build Status](https://travis-ci.com/flmu/mlflow-tracking-server.svg?branch=master)](https://travis-ci.com/github/flmu/mlflow-tracking-server)
 
 This repo provides a docker image of [MLFLow Tracking Server](https://www.mlflow.org/docs/latest/tracking.html) based on an internal file system for metadata (e.g. parameters, metrics) and an [AWS S3 Bucket](https://aws.amazon.com/s3/) for [files and artifacts](https://www.mlflow.org/docs/latest/tracking.html#storage).
 
